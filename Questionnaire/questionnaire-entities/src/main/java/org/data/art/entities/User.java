@@ -2,6 +2,11 @@ package org.data.art.entities;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@Entity
+@XmlRootElement
 public class User extends Person{
 	private List<Questionnaire> started;
 	private List<Questionnaire> completed;
