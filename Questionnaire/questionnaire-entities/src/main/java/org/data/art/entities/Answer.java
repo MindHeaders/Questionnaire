@@ -1,9 +1,19 @@
 package org.data.art.entities;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@XmlRootElement
 public class Answer {
 	private int id;
 	private String answer;
 	private boolean isChecked;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getId() {
 		return id;
 	}
